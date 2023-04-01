@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Add this line to import the Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> <!-- Add this line to import the Open Sans font -->
+    <title>Scratch Game Odds Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <h1>Scratch Game Odds Calculator</h1>
+        <button id="help-button">?</button> <!-- Add the help button -->
+    </div>
+    <form id="odds-form">
+        <label for="total-tickets">Total number of tickets:</label>
+        <input type="number" id="total-tickets" required>
+        <br>
+        <label for="ticket-price">Ticket price (€):</label>
+        <input type="number" id="ticket-price" required>
+        <br>
+        <h2>Prizes</h2>
+        <div id="prizes-wrapper"> <!-- Add this line -->
+            <div id="prizes-container">
+                <div id="prize-elements"> <!-- Add this line to create a separate container for prize elements -->
+                    <div class="prize">
+                        <label>Amount (€):</label>
+                        <input type="number" class="prize-amount">
+                        <label>Number of tickets:</label>
+                        <input type="number" class="prize-tickets">
+                        <button type="button" class="remove-prize">&times;</button>
+                    </div>
+                </div>
+                <button type="button" id="add-prize">Add prize</button>
+            </div>
+        </div> <!-- Add this line -->
+        <br>
+        <button type="submit">Calculate odds</button>
+    </form>
+    <h2>Expected Value (€): <span id="expected-value" class="result">-</span></h2>
+    <h2>Expected Winnings for 1000€ worth of tickets (€): <span id="expected-winnings" class="result">-</span></h2>
+
+    <!-- Add the modal window content -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>User Guide</h2>
+            <p>1. Enter the number of total tickets and the ticket price.</p>
+            <p>2. For each prize amount, add a prize by clicking the "Add Prize" button and enter the prize amount and the number of winning tickets for that prize.</p>
+            <p>3. Click the "Calculate Odds" button to see the expected value and expected winnings based on the information you provided.</p>
+            <p>The calculator computes the expected value and winnings by multiplying the probability of winning each prize by the prize amount, then summing up these values. The expected value represents the average amount you would win if you played the game an infinite number of times, while the expected winnings show your potential winnings for the specified number of tickets you entered.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by OpenAI Assistant</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,210 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif; /* Set the Open Sans font as the default font for the body */    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif; /* Change the font */
+    font-size: 2.5rem; /* Increase the font size */
+    font-weight: 700; /* Make the font bolder */
+    color: #4a4a4a; /* Change the color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    margin-bottom: 30px; /* Add more spacing below the title */
+}
+
+/* Add this style for a simple animation effect */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: fadeIn 2s ease-in-out; /* Add a fade-in animation to the title */
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif; /* Change the font */
+    font-size: 1.8rem; /* Increase the font size */
+    font-weight: 600; /* Make the font semi-bold */
+    color: #4a4a4a; /* Change the color */
+    margin-bottom: 20px; /* Add more spacing below the text */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#prizes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#prize-elements {
+    text-align: center; /* Add this line to center the Add Prize button */
+}
+
+.prize {
+    display: flex;
+    align-items: center; /* Add this line to align the text, button, and inputs */
+    margin-bottom: 10px;
+}
+
+.prize input {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+button {
+    margin-bottom: 20px;
+}
+
+#add-prize {
+    background-color: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px; /* Update this line to make the button not round */
+    padding: 5px 15px; /* Update this line to increase the padding left and right */
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+button[type="submit"] {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+/* Add this media query to stack the inputs and button on smaller screens */
+@media (max-width: 480px) {
+    .prize {
+        flex-direction: column;
+    }
+}
+
+.remove-prize {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 20px; /* Add this line */
+    height: 20px; /* Add this line */
+    border-radius: 50%; /* Add this line */
+    display: flex; /* Add this line */
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
+    font-size: 1rem; /* Update this line */
+    margin-left: 10px;
+    
+}
+
+
+.result {
+    font-size: 2rem; /* Increase the font size */
+    font-weight: 700; /* Make the font bolder */
+    color: #2c3e50; /* Change the color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow */
+}
+
+/* Add this style for a simple animation effect */
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.result {
+    animation: popIn 0.5s ease-in-out; /* Add a pop-in animation to the result */
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: baseline; /* Change this from 'center' to 'baseline' */
+}
+
+#help-button {
+    background-color: gray;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+/* Rest of the code remains the same */
